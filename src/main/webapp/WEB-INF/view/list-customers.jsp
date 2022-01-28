@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+
 <!DOCTYPE html>
 
 <html>
@@ -33,7 +34,8 @@
 				   onclick="window.location.href='showFormForAdd'; return false;"
 				   class="add-button"
 			/>
-		
+
+
 			<!--  add our html table here -->
 		
 			<table>
