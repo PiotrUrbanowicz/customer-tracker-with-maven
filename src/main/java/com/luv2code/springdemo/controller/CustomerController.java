@@ -22,9 +22,7 @@ public class CustomerController {
 	
 	@GetMapping("/list")
 	public String listCustomer(Model theModel) {
-		
 		List<Customer> theCustomers=customerService.getCustomers();
-		
 		theModel.addAttribute("customers", theCustomers);
 		return "list-customers";
 	}
@@ -46,7 +44,6 @@ public class CustomerController {
 	public String showFormForUpdate(@RequestParam("customerId") int theId, Model theModel) {
 		Customer theCustomer=customerService.getCustomer(theId);
 		theModel.addAttribute("customer", theCustomer);
-		System.out.println("/n/n"+theCustomer+"/n/n");
 		return "customer-form";
 	}
 	@GetMapping("/delete")
@@ -55,10 +52,12 @@ public class CustomerController {
 		return "redirect:/customer/list";
 	}
 	
-	
-	//updateCustomer-forAdd
-	//serchecustomer
+	@GetMapping("/search")
+	public String searchCustomer(@RequestParam("searchName") String theSearchName, Model theModel) {
+		List<Customer> theCustomers=customerService.searchCustomers(theSearchName);
+		theModel.addAttribute("customers", theCustomers);
+		return "list-customers";
+	}
 
-	
 }
 

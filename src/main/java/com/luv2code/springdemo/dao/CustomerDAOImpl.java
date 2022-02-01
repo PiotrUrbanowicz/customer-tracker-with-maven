@@ -36,7 +36,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 	@Override
 	public Customer getCutomer(int theId) {
 		Session currentSession=sessionFactory.getCurrentSession();
-		Customer theCustomer=currentSession.getReference(Customer.class, theId);
+		Customer theCustomer=currentSession.find(Customer.class, theId);
 		return theCustomer;
 	}
 
@@ -45,6 +45,18 @@ public class CustomerDAOImpl implements CustomerDAO {
 		Session currentSession=sessionFactory.getCurrentSession();
 		Customer theCustomer=currentSession.getReference(Customer.class, theId);
 		currentSession.delete(theCustomer);
+	}
+
+	@Override
+	public List<Customer> searchCustomers(String theSearchName) {
+		Session currentSession=sessionFactory.getCurrentSession();
+		Query theQuery=currentSession.createQuery(
+				"from Customer where lower(firstName) like :theName"+ 
+				" or lower(lastName) like :theName or lower(email) like :theName",Customer.class);
+		theQuery.setParameter("theName", "%"+theSearchName.toLowerCase()+"%");
+		List <Customer> theCustomers=theQuery.getResultList();
+
+		return theCustomers;
 	}
 
 }
