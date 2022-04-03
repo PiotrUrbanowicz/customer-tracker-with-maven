@@ -5,6 +5,5 @@ Projekt CRUD typu mavan - wykonuje operacje na bazie danych za pomocą formularz
 - Read
 - Update
 - Delete
-- Search alfabetycznie
 - Search poszczegulne frazy
 
