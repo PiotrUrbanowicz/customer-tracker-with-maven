@@ -8,7 +8,6 @@ Projekt maven typu CRUD - wykonuje operacje na bazie danych za pomocą formularz
 - Search wyszukaj poszczególnych użytkowników po frazach
 
 Plik MySQL (Tworzy bazę danych):
-
 https://drive.google.com/file/d/1VHBsUdP7Mw1uQvW8Oi5Td6y062-pbF0M/view?usp=sharing
 
 URUCHOMIENIE PROJEKTU:
