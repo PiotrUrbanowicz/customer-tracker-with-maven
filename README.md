@@ -15,6 +15,6 @@ URUCHOMIENIE PROJEKTU:
 - Zaloguj się jako użytkownik w programie MySQL Workbench(lub podobnym).
 - Stwórz bazę danych uruchamiając ściągnięty kod MySQL
 - Ściągnij projekt z githuba
-- Zmień dane w pliku: persistence-mysql.properties
+- Zmień dane na swoje w pliku: persistence-mysql.properties
 (jdbc.url, jdbc.user, jdbc.password)
 - Uruchom projekt(Na serverze)
