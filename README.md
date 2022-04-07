@@ -1,6 +1,6 @@
 # customer-tracker-with-maven
 
-Projekt maven typu CRUD - wykonuje operacje na bazie danych(Urzytkowników) za pomocą formularzy.
+Projekt maven typu CRUD - wykonuje operacje na bazie danych(Użytkowników) za pomocą formularzy.
 Lista wykonywanych operacji:
 https://drive.google.com/file/d/1w_OZim5RnbzYeGXCmuzTQwEG1RtKt8aa/view?usp=sharing
 
